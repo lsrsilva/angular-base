@@ -1,0 +1,13 @@
+<router-outlet></router-outlet>
+<ul>
+  <li *ngFor="let permissao of data">
+    {{permissao.name}}
+  </li>
+</ul>
+
+<form [formGroup]="form">
+  <input formControlName="profileName" required/>
+  <button (click)="save()">Enviard</button>
+</form>
+
+<button (click)="delete()">Excluir</button>
